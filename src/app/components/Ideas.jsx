@@ -3,7 +3,7 @@ import { FaPaperPlane } from "react-icons/fa";
 
 const Ideas = () => {
     return (
-        <div id='idea' className='flex flex-row items-center h-screen text-[#EEEEEE] m-10 gap-40 justify-center'>
+        <div id='idea' className='flex flex-row items-center h-screen text-[#EEEEEE]  bg-custom bg-cover bg-center m-10 gap-40 justify-center'>
             <div className='flex flex-col'>
                 <div className='flex flex-col '>
                     <h1 className='font-extrabold lg:h-21 lg:text-6xl md:h-14 md:text-5xl text-[#00ADB5]'>Got a project in</h1>
