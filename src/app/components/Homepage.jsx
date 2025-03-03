@@ -4,7 +4,7 @@ import { FiDownload } from "react-icons/fi";
 
 const Homepage = () => {
     return (
-        <div id='home' className='relative text-[#EEEEEE] w-screen h-screen'>
+        <div id='home' className='relative text-[#EEEEEE] flex w-full h-screen'>
             <div className='flex flex-col items-start lg:w-2xl md:w-lg space-y-4 absolute lg:top-35 lg:left-100 md:top-30 md:left-40  '>
                 <h1 className=' font-extrabold lg:h-21 lg:text-7xl md:h-14 md:text-5xl  text-[#00ADB5] typing-effect'>Hello, I'm Najmi</h1>
                 <p className='text-lg font-normal text-justify '>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam nisi ipsa eos eligendi, dicta temporibus sit hic fugit ab quo sint sequi commodi error facere doloremque! Eligendi beatae doloremque voluptas!</p>

@@ -6,7 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
     return (
-        <footer className='flex flex-col p-15 items-center justify-between text-[#EEEEEE] gap-8 '>
+        <footer className='w-full flex flex-col p-15 items-center h-1/4 text-[#EEEEEE] gap-5 '>
             <div className='flex flex-row justify-between items-center gap-15'>
                 <div className='flex flex-row items-center gap-2 text-md hover:text-[#00ADB5] hover:cursor-pointer'>
                     <FiHome />

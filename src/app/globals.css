@@ -36,3 +36,7 @@ body{
 .bg-custom {
     background-image: url('/bgcode.png');
 }
+
+.slick-slide > div {
+    margin: 0 15px;
+}

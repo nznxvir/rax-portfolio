@@ -2,62 +2,67 @@ import React from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useEffect, useState } from 'react';
 
-
-const projects = [
-    {id: 1, title: 'MSE Web Dashboard', img: 'code4.png', desc: 'Lorem ipsum tut tutu'},
-    {id: 2, title: 'Compliance App', img: 'code2.png', desc: 'Lorem ipsum tut tutu'},
-    {id: 3, title: 'SEWA', img: 'code1.png', desc: 'Lorem ipsum tut tutu'},
-    {id: 4, title: 'MSE Web Dashboard', img: 'code4.png', desc: 'Lorem ipsum tut tutu'},
-]
+ const projects = [
+  {
+    id: 1, title: 'MSE Web Dashboard', img: 'proj1.png', desc: `Contributed to PowerApp development project for manufacturing, including Daily Compliance Checklist App and PM Status App to optimize workflows and enhance usability.
+Developed Power BI dashboard for real time data visualization for Material Handshake and Daily Compliance Checklist projects.
+Developed web-based project for MSE records.
+Participated in new system execution and testing to ensure the functionality and improvement of developed solutions.
+Collaborated with cross-functional teams to analyze requirements, design solutions and improve system efficiency`, languages: ['JavaScript', 'CSS', 'HTML']
+  },
+  { id: 2, title: 'Compliance App', img: 'proj2.png', desc: 'Lorem ipsum tut tutu', languages: ['JavaScript', 'CSS', 'HTML'] },
+  { id: 3, title: 'SEWA', img: 'code1.png', desc: 'Lorem ipsum tut tutu', languages: ['JavaScript', 'CSS', 'HTML'] },
+  { id: 4, title: 'MSE Web Dashboard', img: 'code4.png', desc: 'Lorem ipsum tut tutu', languages: ['JavaScript', 'CSS', 'HTML'] },
+] 
 
 const Project = () => {
 
-    const settings = {
-        dots: true,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
 
-      };
+  /* Carousel Setting */
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+
+  };
 
   return (
-    /*<div className='flex items-center flex-col justify-center text-[#EEEEEE] w-screen h-screen'>
-        <h1>Projects</h1>
-    <div className='w-500 bg-[#EEEEEE20] p-20'>
-      <Slider {...settings}>
-        {projects.map((project) => (
-          <div className='flex flex-col justify-between w-150 h-100 bg-[#EEEEEE] rounded-2xl'>
-        <div>
-        <img src='code2.png' alt='Code' className='size-40' />
-        </div>
-        <div className='flex flex-col w-auto h-100 items-start justify-between gap-2 bg-amber-100'>
-            <h2>title</h2>
-            <p>Loremfdwfwqfwq</p>
-        </div>
+    <div id='proj' className='flex flex-col items-center w-full h-screen p-10 pt-30 text-white '>
+      <h1 className='font-extrabold lg:h-21 lg:text-6xl md:h-14 md:text-5xl mb-10 text-[#00ADB5]'>My Projects</h1>
+      <div className=' bg-[#EEEEEE30] w-3/4 h-3/4 p-10 rounded-2xl'>
+        <Slider className='w-' {...settings}>
+          {projects.map((project) => (
+            <div className='flex flex-col items-start gap-3 bg-[#222831] rounded-xl '>
+              <div className=" h-40 bg-cover rounded-t-xl "
+                style={{ backgroundImage: `url(${project.img})` }}>
+              </div>
+              <div className='flex flex-col gap-2 p-5'>
+                <h2 className='text-2xl font-bold lora-font' >{project.title}</h2>
+                <div className='flex flex-wrap gap-2'>
+                  {project.languages.map((lang, index) => (
+                    <span key={index} className='bg-[#00ADB5]  text-white px-2 py-1 text-xs rounded-xl'>
+                      {lang}
+                    </span>
+                  ))}
+                </div>
+                <p>{project.desc}</p>
+              </div>
+            </div>
+
+          ))}
+        </Slider>
+      </div>
     </div>
-        ))}
-      </Slider>
-    </div>
-  </div>*/
-  <div className='flex flex-col bg-[#EEEEEE30] m-50 items-center'>
-    <h1 className='font-extrabold lg:h-21 lg:text-6xl md:h-14 md:text-5xl text-[#00ADB5]'>My Projects</h1>
-    <Slider className='w-' {...settings}>
-        {projects.map((project) => (
-          <div className='flex flex-col justify-between w-150 h-100 bg-[#EEEEEE] rounded-2xl'>
-        <div>
-        <img src='code2.png' alt='Code' className='size-40' />
-        </div>
-        <div className='flex flex-col w-auto h-100 items-start justify-between gap-2 bg-amber-100'>
-            <h2>title</h2>
-            <p>Loremfdwfwqfwq</p>
-        </div>
-    </div>
-        ))}
-      </Slider>
-  </div>
   )
 }
 
 export default Project
+
+
+/* <div className="w-full h-60 bg-cover bg-center "
+  style={{ backgroundImage: `url(${project.img})` }}> 
+        </div> */
